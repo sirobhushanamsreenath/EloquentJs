@@ -30,11 +30,18 @@ sumFunction(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 const rangeFuncUpdate = (start, end, step) => {
   arrayOfValues = [];
   sumOfValues = 0;
-  temp = 0;
-  for (let i = start; i <= end; i += step) {
-    // sumOfValues += i;
-    arrayOfValues.push(i);
+  if (end > start) {
+    for (let i = start; i <= end; i += step) {
+      // sumOfValues += i;
+      arrayOfValues.push(i);
+    }
+  } else {
+    for (let i = start; i >= end; i += step) {
+      // sumOfValues += i;
+      arrayOfValues.push(i);
+    }
   }
+
   console.log(arrayOfValues);
 };
 
